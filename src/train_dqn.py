@@ -39,6 +39,31 @@ from src.reward_shaping  import shaped_reward
 N_ACTIONS = 9
 SCENARIOS = ['training_1', 'training_2', 'training_3']
 
+def random_wind_scenario(rng):
+    dirs = [
+        (-1, -1), (0, -1), (1, -1),
+        (-1,  0),          (1,  0),
+        (-1,  1), (0,  1), (1,  1),
+        (-0.55, 1), (0.55, 1), (-0.55, -1), (0.55, -1),
+    ]
+
+    pattern = tuple(
+        tuple(dirs[int(rng.integers(0, len(dirs)))] for _ in range(3))
+        for _ in range(3)
+    )
+
+    return {
+        "wind_init_params": {
+            "base_speed": float(rng.uniform(8.0, 12.0)),
+            "base_max_rotation_angle_degree": float(rng.uniform(5.0, 25.0)),
+            "pattern": pattern,
+        },
+        "wind_evol_params": {
+            "mean_rotation_angle_degree": float(rng.uniform(1.0, 5.0)),
+            "std_rotation_angle_degree": float(rng.uniform(0.2, 1.5)),
+        },
+    }
+
 
 def train(
     # ── Durée ──────────────────────────────────────────
@@ -124,8 +149,14 @@ def train(
     for episode in range(start_episode, n_episodes):
 
         # ── Choix du scénario (rotation) ───────────────────────────────────
-        scenario_name   = SCENARIOS[episode % len(SCENARIOS)]
-        scenario_params = get_wind_scenario(scenario_name)
+        # 50 % scénarios officiels, 50 % scénarios randomisés
+        if rng.random() < 0.5:
+            scenario_name = SCENARIOS[episode % len(SCENARIOS)]
+            scenario_params = get_wind_scenario(scenario_name)
+        else:
+            scenario_name = "random"
+            scenario_params = random_wind_scenario(rng)
+
         env = SailingEnv(**scenario_params)
 
         obs_raw, _ = env.reset(seed=int(rng.integers(0, 100_000)))
