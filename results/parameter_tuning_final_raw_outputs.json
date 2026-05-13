@@ -1,0 +1,80 @@
+{
+  "agent_final_006.py": {
+    "params": {
+      "horizon": 2,
+      "progress_weight": 4.0,
+      "waypoint_weight": 1.6,
+      "north_speed_weight": 7.0,
+      "goal_weight": 0.35,
+      "collision_penalty": 500000.0,
+      "border_penalty": 2000.0,
+      "center_penalty": 60.0,
+      "wp_radius": 14.0,
+      "side_margin": 0.05,
+      "stay_penalty": 200.0,
+      "south_penalty": 300.0
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "n_rows": 3,
+      "timeout": false,
+      "elapsed_sec": 188.20436000823975,
+      "cmd": "python evaluate_submission.py /home/onyxia/work/stable_v2_RL_sailing_challenge/src/agents/agent_final_006.py --seeds 1 --num-seeds 20"
+    },
+    "stdout": "Loaded agent: MyAgent\n\nEvaluating on 3 wind scenarios with 20 seeds\nAgent: MyAgent\nMaximum steps per episode: 500\n\nWIND_SCENARIO    | SUCCESS RATE | MEAN REWARD       | MEAN STEPS\n---------------------------------------------------------------------------\ntraining_1   | Success: 100.00% | Reward: 72.46 \u00b1 2.01 | Steps: 65.3 \u00b1 5.5\ntraining_2   | Success: 100.00% | Reward: 80.07 \u00b1 0.29 | Steps: 45.4 \u00b1 0.7\ntraining_3   | Success: 100.00% | Reward: 71.35 \u00b1 2.29 | Steps: 68.5 \u00b1 6.0\n---------------------------------------------------------------------------\nOVERALL      | Success: 100.00% \u00b1 0.00%\nReward: 74.62 \u00b1 3.88\nSteps: 59.7 \u00b1 10.2\n",
+    "stderr": ""
+  },
+  "agent_final_010.py": {
+    "params": {
+      "horizon": 2,
+      "progress_weight": 4.0,
+      "waypoint_weight": 2.0,
+      "north_speed_weight": 7.0,
+      "goal_weight": 0.35,
+      "collision_penalty": 500000.0,
+      "border_penalty": 2000.0,
+      "center_penalty": 60.0,
+      "wp_radius": 14.0,
+      "side_margin": 0.05,
+      "stay_penalty": 200.0,
+      "south_penalty": 300.0
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "n_rows": 3,
+      "timeout": false,
+      "elapsed_sec": 197.31034803390503,
+      "cmd": "python evaluate_submission.py /home/onyxia/work/stable_v2_RL_sailing_challenge/src/agents/agent_final_010.py --seeds 1 --num-seeds 20"
+    },
+    "stdout": "Loaded agent: MyAgent\n\nEvaluating on 3 wind scenarios with 20 seeds\nAgent: MyAgent\nMaximum steps per episode: 500\n\nWIND_SCENARIO    | SUCCESS RATE | MEAN REWARD       | MEAN STEPS\n---------------------------------------------------------------------------\ntraining_1   | Success: 100.00% | Reward: 72.41 \u00b1 2.09 | Steps: 65.5 \u00b1 5.8\ntraining_2   | Success: 100.00% | Reward: 80.07 \u00b1 0.29 | Steps: 45.4 \u00b1 0.7\ntraining_3   | Success: 100.00% | Reward: 71.33 \u00b1 2.32 | Steps: 68.5 \u00b1 6.1\n---------------------------------------------------------------------------\nOVERALL      | Success: 100.00% \u00b1 0.00%\nReward: 74.60 \u00b1 3.89\nSteps: 59.8 \u00b1 10.3\n",
+    "stderr": ""
+  },
+  "agent_final_002.py": {
+    "params": {
+      "horizon": 2,
+      "progress_weight": 4.0,
+      "waypoint_weight": 1.3,
+      "north_speed_weight": 7.0,
+      "goal_weight": 0.35,
+      "collision_penalty": 500000.0,
+      "border_penalty": 2000.0,
+      "center_penalty": 60.0,
+      "wp_radius": 14.0,
+      "side_margin": 0.05,
+      "stay_penalty": 200.0,
+      "south_penalty": 300.0
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "n_rows": 3,
+      "timeout": false,
+      "elapsed_sec": 192.7395257949829,
+      "cmd": "python evaluate_submission.py /home/onyxia/work/stable_v2_RL_sailing_challenge/src/agents/agent_final_002.py --seeds 1 --num-seeds 20"
+    },
+    "stdout": "Loaded agent: MyAgent\n\nEvaluating on 3 wind scenarios with 20 seeds\nAgent: MyAgent\nMaximum steps per episode: 500\n\nWIND_SCENARIO    | SUCCESS RATE | MEAN REWARD       | MEAN STEPS\n---------------------------------------------------------------------------\ntraining_1   | Success: 100.00% | Reward: 70.62 \u00b1 1.71 | Steps: 70.5 \u00b1 4.8\ntraining_2   | Success: 100.00% | Reward: 80.01 \u00b1 0.30 | Steps: 45.5 \u00b1 0.7\ntraining_3   | Success: 100.00% | Reward: 71.35 \u00b1 2.29 | Steps: 68.5 \u00b1 6.0\n---------------------------------------------------------------------------\nOVERALL      | Success: 100.00% \u00b1 0.00%\nReward: 73.99 \u00b1 4.26\nSteps: 61.5 \u00b1 11.3\n",
+    "stderr": ""
+  }
+}

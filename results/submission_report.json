@@ -1,0 +1,32 @@
+{
+  "final_agent_source": "src/agents/my_agent.py",
+  "submission_agent": "submissions/my_agent.py",
+  "zip_path": "submissions/my_submission.zip",
+  "zip_size_bytes": 2977,
+  "zip_content": [
+    "my_agent.py"
+  ],
+  "static_checks": {
+    "file_exists": true,
+    "defines_MyAgent": true,
+    "has_act": true,
+    "has_reset": true,
+    "has_seed": true,
+    "mentions_BaseAgent": true,
+    "no_training_keywords_obvious": true
+  },
+  "validity": {
+    "returncode": 0,
+    "elapsed_sec": 2.8098044395446777,
+    "stdout_preview": "\u001b[94m\u2728 Validating agent in: /home/onyxia/work/stable_v2_RL_sailing_challenge/src/agents/my_agent.py \u2728\u001b[0m\n==================================================\n\n\ud83e\udd16 \u001b[1mAgent: MyAgent\u001b[0m\n\n\u001b[92m\u2705 SUCCESS: Your agent meets all requirements!\u001b[0m\n\n\u001b[93m\u26a0\ufe0f Warnings (not required to fix, but recommended):\u001b[0m\n  1. Agent does not implement save() method\n  2. Agent does not implement load() method\n\n==================================================\n\n\u001b[92m\ud83c\udf89 Your agent is ready for submission!\u001b[0m\n\u001b[94mRun this command to test performance before submitting:\u001b[0m\npython src/evaluate_submission.py /home/onyxia/work/stable_v2_RL_sailing_challenge/src/agents/my_agent.py --seeds 1 --num-seeds 10\n",
+    "stderr_preview": ""
+  },
+  "local_eval": {
+    "run": true,
+    "num_seeds": 20,
+    "rows": [],
+    "returncode": 0,
+    "stdout_preview": "Loaded agent: MyAgent\n\nEvaluating on 3 wind scenarios with 20 seeds\nAgent: MyAgent\nMaximum steps per episode: 500\n\nWIND_SCENARIO    | SUCCESS RATE | MEAN REWARD       | MEAN STEPS\n---------------------------------------------------------------------------\ntraining_1   | Success: 100.00% | Reward: 72.80 \u00b1 1.85 | Steps: 64.4 \u00b1 5.1\ntraining_2   | Success: 100.00% | Reward: 80.09 \u00b1 0.26 | Steps: 45.3 \u00b1 0.6\ntraining_3   | Success: 100.00% | Reward: 71.33 \u00b1 2.27 | Steps: 68.5 \u00b1 6.0\n---------------------------------------------------------------------------\nOVERALL      | Success: 100.00% \u00b1 0.00%\nReward: 74.74 \u00b1 3.83\nSteps: 59.4 \u00b1 10.1\n",
+    "stderr_preview": ""
+  }
+}

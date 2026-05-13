@@ -6,7 +6,7 @@ setting, it will always find the goal without crashing into the island
 """
 
 import numpy as np # type: ignore
-from src.agents.base_agent import BaseAgent 
+from agents.base_agent import BaseAgent
 
 class SuperNaiveAgent(BaseAgent):
     """

@@ -54,12 +54,12 @@ class MyAgent(BaseAgent):
 
         self.horizon = 2
         self.progress_weight = 4.0
-        self.waypoint_weight = 1.6
-        self.north_speed_weight = 8.0
+        self.waypoint_weight = 1.3
+        self.north_speed_weight = 5.0
         self.goal_weight = 0.35
         self.collision_penalty = 500000.0
         self.border_penalty = 2000.0
-        self.center_penalty = 30.0
+        self.center_penalty = 120.0
         self.wp_radius = 14.0
         self.side_margin = 0.05
         self.stay_penalty = 200.0
